@@ -13,6 +13,11 @@
 .App-link {
   color: #61dafb;
 }
+a{
+  display: block;
+  text-decoration: underline;
+  width: 100%;
+}
 /* img{
   width: 200px;
   height: 200px;

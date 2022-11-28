@@ -1,7 +1,10 @@
-const urls = 'https://api.giphy.com/v1/gifs/search?api_key=8ffJV1j8NXhSFhfyqZxdXPcWBNB4anSJ&q=pandas&limit=10&offset=0&rating=g&lang=en'
+const key = '8ffJV1j8NXhSFhfyqZxdXPcWBNB4anSJ'
 
 
-export default function getGifs () {
+
+export default function getGifs ( {keyword = 'pandas'} = {}) {
+  console.log(keyword)
+  const urls = `https://api.giphy.com/v1/gifs/search?api_key=${key}&q=${keyword}&limit=10&offset=0&rating=g&lang=en`
   return fetch(urls)
     .then(res => res.json())
     .then(response => {

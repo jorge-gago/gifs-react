@@ -1,13 +1,16 @@
 import React from 'react';
 import ListOfGifs from './components/ListOfGifs';
 import './App.css';
-import { link, Route} from "wouter"
+import {Link, Route} from "wouter"
 
 
 function App() {
   return (
     <div className="App">
       <h1>gifs</h1>
+      <Link to="/gif/car">Car</Link>
+      <Link to="/gif/batman">Batman</Link>
+      <Link to="/gif/pandas">pandas</Link>
       <Route 
         component={ListOfGifs}
         path="/gif/:word"
